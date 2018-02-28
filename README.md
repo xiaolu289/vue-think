@@ -2,10 +2,10 @@ vue-think
 ===============
 ## 注意事项
 
-该项目fork自：https://github.com/honraytech/vue-think
+该项目fork自：https://github.com/honraytech/VueThink
 
 ## 项目介绍
-这个项目主要是改进了当时vue-think中存在的一些问题
+这个项目主要是改进了当时VueThink中存在的一些问题
 * 1：修复添加菜单无法刷新，必须重新登录才能出现
 * 2：修复菜单没有滚动条，当菜单过多的时候无法显示
 * 3：修复对用户组编辑权限，按钮还显示
