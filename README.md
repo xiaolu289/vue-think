@@ -18,7 +18,7 @@ vue-think
 ## 使用许可：
 vue-think是基于MIT协议的开源框架，它完全免费。你可以免费下载vue-think，用来搭建自己的或者团体的软件。
 
-##主要适用技术栈
+## 主要适用技术栈
 * 后端框架：ThinkPHP 5.x
 * 前端MVVM框架：Vue.JS 2.5.2
 * 开发工作流：Webpack 3.6.0
@@ -108,4 +108,8 @@ location / {
 cd frontEnd
 npm run dev
 ```
+
+### 技术交流
+QQ群：701522648
+欢迎大家与我一起共同迭代，优化！
 
