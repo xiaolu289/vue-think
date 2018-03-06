@@ -1,5 +1,5 @@
 <?php
-namespace app\admin\controller;
+namespace app\common\controller;
 
 use think\Request;
 use think\Db;
@@ -8,15 +8,16 @@ use app\common\controller\Common;
 
 class BaseCommon extends Common
 {
+    // 检查header并从header提取authkey并获取uid
     public $uid;
     public function _initialize()
     {
         parent::_initialize();
         $header = Request::instance()->header();
         $authKey = $header['authkey'];
-        $userModel = model('User');
+        $userModel = model('app\admin\model\User');
         $uid = $userModel->getUid($authKey);
-        if($uid){
+        if(!empty($authKey) && $uid){
             $this->uid = $uid;
         }else{
             header('Content-Type:application/json; charset=utf-8');

@@ -5,32 +5,20 @@
 // | Author: linchuangbin <linchuangbin@honraytech.com>
 // +----------------------------------------------------------------------
 
-namespace app\admin\controller;
+namespace app\common\controller;
 
 use think\Request;
 use think\Db;
 use app\common\adapter\AuthAdapter;
-use app\common\controller\Common;
 
-class ApiCommon extends Common
+class ApiCommon extends BaseCommon
 {
-    public $uid;
     public function _initialize()
     {
         parent::_initialize();
-        /*获取头部信息*/ 
-        $header = Request::instance()->header();
-        $authKey = $header['authkey'];
-        $uid = model('User')->getUid($authKey);
-        $this->uid = $uid;
-        // 校验authKey
-        if (empty($authKey) || !$uid) {
-            header('Content-Type:application/json; charset=utf-8');
-            exit(json_encode(['code'=>101, 'error'=>'登录已失效']));
-        }
-
         // 检查账号有效性
-        $userInfo = model('User')->getUserById($uid);
+        $uid = $this->uid;
+        $userInfo = model('app\admin\model\User')->getUserById($uid);
         $map['id'] = $userInfo['id'];
         $map['status'] = 1;
         if (!Db::name('admin_user')->where($map)->value('id')) {

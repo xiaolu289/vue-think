@@ -8,7 +8,7 @@
 namespace app\admin\model;
 
 use think\Db;
-use app\admin\model\Common;
+use app\common\model\Common;
 use com\verify\HonrayVerify;
 use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Signer\Hmac\Sha256;

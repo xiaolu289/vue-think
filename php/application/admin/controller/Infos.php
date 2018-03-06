@@ -1,6 +1,8 @@
 <?php
 namespace app\admin\controller;
+
 use think\Request;
+use app\common\controller\BaseCommon;
 
 class Infos extends BaseCommon
 {

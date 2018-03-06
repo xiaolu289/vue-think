@@ -7,7 +7,7 @@
 
 namespace app\admin\model;
 
-use app\admin\model\Common;
+use app\common\model\Common;
 
 class Group extends Common 
 {

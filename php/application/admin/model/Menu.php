@@ -8,7 +8,7 @@
 namespace app\admin\model;
 
 use think\Db;
-use app\admin\model\Common;
+use app\common\model\Common;
 
 class Menu extends Common 
 {
