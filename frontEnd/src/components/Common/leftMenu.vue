@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     defaultOpends() {
-      if (this.$route.path !== '/home/config/add') {
+      if (this.$route.path !== '/admin/config/add') {
         const pathsArr = this.$route.path.split('/')
         const pathModule = ['', pathsArr[1], pathsArr[2]].join('/')
         const operation = pathsArr[3]

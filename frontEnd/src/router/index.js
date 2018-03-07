@@ -12,25 +12,25 @@ import _g from '@/assets/js/global.js'
 import Login from '@/components/Account/Login.vue'
 import refresh from '@/components/refresh.vue'
 import Home from '@/components/Home.vue'
-import menuList from '@/components/Administrative/system/menu/list.vue'
-import menuAdd from '@/components/Administrative/system/menu/add.vue'
-import menuEdit from '@/components/Administrative/system/menu/edit.vue'
-import systemConfig from '@/components/Administrative/system/config/add.vue'
-import ruleList from '@/components/Administrative/system/rule/list.vue'
-import ruleAdd from '@/components/Administrative/system/rule/add.vue'
-import ruleEdit from '@/components/Administrative/system/rule/edit.vue'
-import positionList from '@/components/Administrative/structures/position/list.vue'
-import positionAdd from '@/components/Administrative/structures/position/add.vue'
-import positionEdit from '@/components/Administrative/structures/position/edit.vue'
-import structuresList from '@/components/Administrative/structures/structures/list.vue'
-import structuresAdd from '@/components/Administrative/structures/structures/add.vue'
-import structuresEdit from '@/components/Administrative/structures/structures/edit.vue'
-import groupsList from '@/components/Administrative/structures/groups/list.vue'
-import groupsAdd from '@/components/Administrative/structures/groups/add.vue'
-import groupsEdit from '@/components/Administrative/structures/groups/edit.vue'
-import usersList from '@/components/Administrative/personnel/users/list.vue'
-import usersAdd from '@/components/Administrative/personnel/users/add.vue'
-import usersEdit from '@/components/Administrative/personnel/users/edit.vue'
+import menuList from '@/components/Admin/system/menu/list.vue'
+import menuAdd from '@/components/Admin/system/menu/add.vue'
+import menuEdit from '@/components/Admin/system/menu/edit.vue'
+import systemConfig from '@/components/Admin/system/config/add.vue'
+import ruleList from '@/components/Admin/system/rule/list.vue'
+import ruleAdd from '@/components/Admin/system/rule/add.vue'
+import ruleEdit from '@/components/Admin/system/rule/edit.vue'
+import positionList from '@/components/Admin/structures/position/list.vue'
+import positionAdd from '@/components/Admin/structures/position/add.vue'
+import positionEdit from '@/components/Admin/structures/position/edit.vue'
+import structuresList from '@/components/Admin/structures/structures/list.vue'
+import structuresAdd from '@/components/Admin/structures/structures/add.vue'
+import structuresEdit from '@/components/Admin/structures/structures/edit.vue'
+import groupsList from '@/components/Admin/structures/groups/list.vue'
+import groupsAdd from '@/components/Admin/structures/groups/add.vue'
+import groupsEdit from '@/components/Admin/structures/groups/edit.vue'
+import usersList from '@/components/Admin/personnel/users/list.vue'
+import usersAdd from '@/components/Admin/personnel/users/add.vue'
+import usersEdit from '@/components/Admin/personnel/users/edit.vue'
 import mailList from '@/components/Busi/mail/mail/list.vue'
 import mailAdd from '@/components/Busi/mail/mail/add.vue'
 import mailEdit from '@/components/Busi/mail/mail/edit.vue'
@@ -47,76 +47,76 @@ Vue.use(VueRouter)
 const routes = [
   { path: '/', component: Login, name: 'Login' },
   {
-    path: '/home',
+    path: '/admin',
     component: Home,
     children: [
       { path: '/refresh', component: refresh, name: 'refresh' }
     ]
   },
   {
-    path: '/home',
+    path: '/admin',
     component: Home,
     children: [
-      { path: 'menu/list', component: menuList, name: 'menuList', meta: { hideLeft: false, module: 'Administrative', menu: 'menu' }},
-      { path: 'menu/add', component: menuAdd, name: 'menuAdd', meta: { hideLeft: false, module: 'Administrative', menu: 'menu' }},
-      { path: 'menu/edit/:id', component: menuEdit, name: 'menuEdit', meta: { hideLeft: false, module: 'Administrative', menu: 'menu' }}
+      { path: 'menu/list', component: menuList, name: 'menuList', meta: { hideLeft: false, module: 'Admin', menu: 'menu' }},
+      { path: 'menu/add', component: menuAdd, name: 'menuAdd', meta: { hideLeft: false, module: 'Admin', menu: 'menu' }},
+      { path: 'menu/edit/:id', component: menuEdit, name: 'menuEdit', meta: { hideLeft: false, module: 'Admin', menu: 'menu' }}
     ]
   },
   {
-    path: '/home',
+    path: '/admin',
     component: Home,
     children: [
-      { path: 'config/add', component: systemConfig, name: 'systemConfig', meta: { hideLeft: false, module: 'Administrative', menu: 'systemConfig' }}
+      { path: 'config/add', component: systemConfig, name: 'systemConfig', meta: { hideLeft: false, module: 'Admin', menu: 'systemConfig' }}
     ]
   },
 
   {
-    path: '/home',
+    path: '/admin',
     component: Home,
     children: [
-      { path: 'rule/list', component: ruleList, name: 'ruleList', meta: { hideLeft: false, module: 'Administrative', menu: 'rule' }},
-      { path: 'rule/add', component: ruleAdd, name: 'ruleAdd', meta: { hideLeft: false, module: 'Administrative', menu: 'rule' }},
-      { path: 'rule/edit/:id', component: ruleEdit, name: 'ruleEdit', meta: { hideLeft: false, module: 'Administrative', menu: 'rule' }}
+      { path: 'rule/list', component: ruleList, name: 'ruleList', meta: { hideLeft: false, module: 'Admin', menu: 'rule' }},
+      { path: 'rule/add', component: ruleAdd, name: 'ruleAdd', meta: { hideLeft: false, module: 'Admin', menu: 'rule' }},
+      { path: 'rule/edit/:id', component: ruleEdit, name: 'ruleEdit', meta: { hideLeft: false, module: 'Admin', menu: 'rule' }}
     ]
   },
   {
-    path: '/home',
+    path: '/admin',
     component: Home,
     children: [
-      { path: 'position/list', component: positionList, name: 'positionList', meta: { hideLeft: false, module: 'Administrative', menu: 'position' }},
-      { path: 'position/add', component: positionAdd, name: 'positionAdd', meta: { hideLeft: false, module: 'Administrative', menu: 'position' }},
-      { path: 'position/edit/:id', component: positionEdit, name: 'positionEdit', meta: { hideLeft: false, module: 'Administrative', menu: 'position' }}
+      { path: 'position/list', component: positionList, name: 'positionList', meta: { hideLeft: false, module: 'Admin', menu: 'position' }},
+      { path: 'position/add', component: positionAdd, name: 'positionAdd', meta: { hideLeft: false, module: 'Admin', menu: 'position' }},
+      { path: 'position/edit/:id', component: positionEdit, name: 'positionEdit', meta: { hideLeft: false, module: 'Admin', menu: 'position' }}
     ]
   },
   {
-    path: '/home',
+    path: '/admin',
     component: Home,
     children: [
-      { path: 'structures/list', component: structuresList, name: 'structuresList', meta: { hideLeft: false, module: 'Administrative', menu: 'structures' }},
-      { path: 'structures/add', component: structuresAdd, name: 'structuresAdd', meta: { hideLeft: false, module: 'Administrative', menu: 'structures' }},
-      { path: 'structures/edit/:id', component: structuresEdit, name: 'structuresEdit', meta: { hideLeft: false, module: 'Administrative', menu: 'structures' }}
+      { path: 'structures/list', component: structuresList, name: 'structuresList', meta: { hideLeft: false, module: 'Admin', menu: 'structures' }},
+      { path: 'structures/add', component: structuresAdd, name: 'structuresAdd', meta: { hideLeft: false, module: 'Admin', menu: 'structures' }},
+      { path: 'structures/edit/:id', component: structuresEdit, name: 'structuresEdit', meta: { hideLeft: false, module: 'Admin', menu: 'structures' }}
     ]
   },
   {
-    path: '/home',
+    path: '/admin',
     component: Home,
     children: [
-      { path: 'groups/list', component: groupsList, name: 'groupsList', meta: { hideLeft: false, module: 'Administrative', menu: 'groups' }},
-      { path: 'groups/add', component: groupsAdd, name: 'groupsAdd', meta: { hideLeft: false, module: 'Administrative', menu: 'groups' }},
-      { path: 'groups/edit/:id', component: groupsEdit, name: 'groupsEdit', meta: { hideLeft: false, module: 'Administrative', menu: 'groups' }}
+      { path: 'groups/list', component: groupsList, name: 'groupsList', meta: { hideLeft: false, module: 'Admin', menu: 'groups' }},
+      { path: 'groups/add', component: groupsAdd, name: 'groupsAdd', meta: { hideLeft: false, module: 'Admin', menu: 'groups' }},
+      { path: 'groups/edit/:id', component: groupsEdit, name: 'groupsEdit', meta: { hideLeft: false, module: 'Admin', menu: 'groups' }}
     ]
   },
   {
-    path: '/home',
+    path: '/admin',
     component: Home,
     children: [
-      { path: 'users/list', component: usersList, name: 'usersList', meta: { hideLeft: false, module: 'Administrative', menu: 'users' }},
-      { path: 'users/add', component: usersAdd, name: 'usersAdd', meta: { hideLeft: false, module: 'Administrative', menu: 'users' }},
-      { path: 'users/edit/:id', component: usersEdit, name: 'usersEdit', meta: { hideLeft: false, module: 'Administrative', menu: 'users' }}
+      { path: 'users/list', component: usersList, name: 'usersList', meta: { hideLeft: false, module: 'Admin', menu: 'users' }},
+      { path: 'users/add', component: usersAdd, name: 'usersAdd', meta: { hideLeft: false, module: 'Admin', menu: 'users' }},
+      { path: 'users/edit/:id', component: usersEdit, name: 'usersEdit', meta: { hideLeft: false, module: 'Admin', menu: 'users' }}
     ]
   },
   {
-    path: '/home',
+    path: '/busi',
     component: Home,
     children: [
       { path: 'mail/list', component: mailList, name: 'mailList', meta: { hideLeft: false, module: 'Busi', menu: 'mail' }},
