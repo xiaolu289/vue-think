@@ -14,7 +14,6 @@
   export default {
     props: ['selectedData', 'type'],
     data() {
-      console.log(this.type)
       return {
         enableLoading: false,
         disableLoading: false,

@@ -37,7 +37,7 @@
 			<el-table-column
 			label="状态"
 			width="100">
-        <template scope="scope">
+        <template slot-scope="scope">
           <div>
             {{ scope.row.status | status }}
           </div>
@@ -46,7 +46,7 @@
 			<el-table-column
 			label="操作"
 			width="200">
-        <template scope="scope">
+        <template slot-scope="scope">
           <div>
             <span v-if="editShow">
               <router-link :to="{ name: 'usersEdit', params: { id: scope.row.id }}">
