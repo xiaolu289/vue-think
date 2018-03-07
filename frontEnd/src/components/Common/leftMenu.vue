@@ -46,14 +46,6 @@ export default {
     },
     handleOpen(index, indexPath) {
 
-    },
-    routerChange(item) {
-      // 与当前页面路由相等则刷新页面
-      if (item.url != this.$route.path) {
-        router.push(item.url)
-      } else {
-        _g.shallowRefresh(this.$route.name)
-      }
     }
   },
   watch: {
