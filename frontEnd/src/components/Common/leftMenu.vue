@@ -55,6 +55,11 @@ export default {
         _g.shallowRefresh(this.$route.name)
       }
     }
+  },
+  watch: {
+    '$route' (to, from) {
+      this.defaultActive = this.defaultOpends()
+    }
   }
 }
 </script>
