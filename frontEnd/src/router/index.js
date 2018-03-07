@@ -31,6 +31,9 @@ import groupsEdit from '@/components/Administrative/structures/groups/edit.vue'
 import usersList from '@/components/Administrative/personnel/users/list.vue'
 import usersAdd from '@/components/Administrative/personnel/users/add.vue'
 import usersEdit from '@/components/Administrative/personnel/users/edit.vue'
+import mailList from '@/components/Busi/mail/mail/list.vue'
+import mailAdd from '@/components/Busi/mail/mail/add.vue'
+import mailEdit from '@/components/Busi/mail/mail/edit.vue'
 
 Vue.use(VueRouter)
 
@@ -110,6 +113,15 @@ const routes = [
       { path: 'users/list', component: usersList, name: 'usersList', meta: { hideLeft: false, module: 'Administrative', menu: 'users' }},
       { path: 'users/add', component: usersAdd, name: 'usersAdd', meta: { hideLeft: false, module: 'Administrative', menu: 'users' }},
       { path: 'users/edit/:id', component: usersEdit, name: 'usersEdit', meta: { hideLeft: false, module: 'Administrative', menu: 'users' }}
+    ]
+  },
+  {
+    path: '/home',
+    component: Home,
+    children: [
+      { path: 'mail/list', component: mailList, name: 'mailList', meta: { hideLeft: false, module: 'Busi', menu: 'mail' }},
+      { path: 'mail/add', component: mailAdd, name: 'mailAdd', meta: { hideLeft: false, module: 'Busi', menu: 'mail' }},
+      { path: 'mail/edit/:id', component: mailEdit, name: 'mailEdit', meta: { hideLeft: false, module: 'Busi', menu: 'mail' }}
     ]
   }
 ]
