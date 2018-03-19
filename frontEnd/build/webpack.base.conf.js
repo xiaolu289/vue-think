@@ -19,8 +19,8 @@ const createLintingRule = () => ({
   }
 })
 
-const DEV_HOST = JSON.stringify('http://www.eyouservice.com');
-const PUB_HOST = JSON.stringify('http://api.xiaolu289.com');
+const DEV_HOST = JSON.stringify('http://www.vuethinktest.com');
+const PUB_HOST = JSON.stringify('http://www.vuethinktest.com');
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
