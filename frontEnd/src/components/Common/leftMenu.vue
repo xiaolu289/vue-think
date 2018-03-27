@@ -33,16 +33,38 @@ export default {
     }
   },
   methods: {
-    defaultOpends() {
-      if (this.$route.path !== '/admin/config/add') {
-        const pathsArr = this.$route.path.split('/')
-        const pathModule = ['', pathsArr[1], pathsArr[2]].join('/')
-        const operation = pathsArr[3]
-        if (operation !== 'list') {
-          return pathModule + '/list'
+    findMenuByUrl (menus, pathModule) {
+      // 非递归方案
+      // const queue = [...menus]
+      // let i = 0
+      // while (i < queue.length) {
+      //   const item = queue[i]
+      //   if (item.url.indexOf(pathModule) !== -1) {
+      //     return item.url
+      //   } else if (item.child) {
+      //     queue.push(...item.child)
+      //   }
+      //   i++
+      // }
+      //  递归方案
+      for (let i = 0, len = menus.length; i < len; i++) {
+        let item = menus[i]
+        if (item.url.indexOf(pathModule) !== -1) {
+          return item.url
+        } else if (item.child) {
+          const result = this.findMenuByUrl(item.child, pathModule)
+          if (result) {
+            return result
+          }
         }
       }
-      return this.$route.path
+    },
+    defaultOpends() {
+      const pathsArr = this.$route.path.split('/')
+      const pathModule = ['', pathsArr[1], pathsArr[2]].join('/')
+      const url = this.findMenuByUrl(this.$store.state.menus, pathModule)
+      console.log(url)
+      return url
     },
     handleOpen(index, indexPath) {
 
