@@ -35,28 +35,16 @@ export default {
   methods: {
     findMenuByUrl (menus, pathModule) {
       // 非递归方案
-      // const queue = [...menus]
-      // let i = 0
-      // while (i < queue.length) {
-      //   const item = queue[i]
-      //   if (item.url.indexOf(pathModule) !== -1) {
-      //     return item.url
-      //   } else if (item.child) {
-      //     queue.push(...item.child)
-      //   }
-      //   i++
-      // }
-      //  递归方案
-      for (let i = 0, len = menus.length; i < len; i++) {
-        let item = menus[i]
+      const queue = [...menus]
+      let i = 0
+      while (i < queue.length) {
+        const item = queue[i]
         if (item.url.indexOf(pathModule) !== -1) {
           return item.url
         } else if (item.child) {
-          const result = this.findMenuByUrl(item.child, pathModule)
-          if (result) {
-            return result
-          }
+          queue.push(...item.child)
         }
+        i++
       }
     },
     defaultOpends() {
