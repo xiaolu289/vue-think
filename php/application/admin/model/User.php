@@ -358,7 +358,8 @@ class User extends Common
     {
     	if ($u_id === 1) {
             $map['status'] = 1;            
-    		$menusList = Db::name('admin_menu')->where($map)->order('sort asc')->select();
+			$menusList = Db::name('admin_menu')->where($map)->order('sort asc')->select();
+			$rules = [];
     	} else {
     		$groups = $this->get($u_id)->groups;
             $ruleIds = [];
