@@ -79,6 +79,7 @@ class Tree{
                 // 判断是否存在parent
                 $parent_id = $data[$pid];
                 if($parent_id === null || (int)$root === $parent_id){
+                    // 根节点
                     $tree[] =& $list[$key];
                 }else{
                     if(isset($refer[$parent_id])){
