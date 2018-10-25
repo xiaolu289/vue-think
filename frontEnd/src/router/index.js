@@ -9,31 +9,31 @@ import Lockr from 'lockr'
 import config from '@/assets/js/config.js'
 import _g from '@/assets/js/global.js'
 // 组件
-import Login from '@/components/Account/Login.vue'
-import refresh from '@/components/refresh.vue'
-import Home from '@/components/Home.vue'
-import menuList from '@/components/Admin/system/menu/list.vue'
-import menuAdd from '@/components/Admin/system/menu/add.vue'
-import menuEdit from '@/components/Admin/system/menu/edit.vue'
-import systemConfig from '@/components/Admin/system/config/add.vue'
-import ruleList from '@/components/Admin/system/rule/list.vue'
-import ruleAdd from '@/components/Admin/system/rule/add.vue'
-import ruleEdit from '@/components/Admin/system/rule/edit.vue'
-import positionList from '@/components/Admin/structures/position/list.vue'
-import positionAdd from '@/components/Admin/structures/position/add.vue'
-import positionEdit from '@/components/Admin/structures/position/edit.vue'
-import structuresList from '@/components/Admin/structures/structures/list.vue'
-import structuresAdd from '@/components/Admin/structures/structures/add.vue'
-import structuresEdit from '@/components/Admin/structures/structures/edit.vue'
-import groupsList from '@/components/Admin/structures/groups/list.vue'
-import groupsAdd from '@/components/Admin/structures/groups/add.vue'
-import groupsEdit from '@/components/Admin/structures/groups/edit.vue'
-import usersList from '@/components/Admin/personnel/users/list.vue'
-import usersAdd from '@/components/Admin/personnel/users/add.vue'
-import usersEdit from '@/components/Admin/personnel/users/edit.vue'
-import mailList from '@/components/Busi/mail/mail/list.vue'
-import mailAdd from '@/components/Busi/mail/mail/add.vue'
-import mailEdit from '@/components/Busi/mail/mail/edit.vue'
+let Login = (resolve) => require(['@/components/Account/Login.vue'], resolve)
+let refresh = (resolve) => require(['@/components/refresh.vue'], resolve)
+let Home = (resolve) => require(['@/components/Home.vue'], resolve)
+let menuList = (resolve) => require(['@/components/Admin/system/menu/list.vue'], resolve)
+let menuAdd = (resolve) => require(['@/components/Admin/system/menu/add.vue'], resolve)
+let menuEdit = (resolve) => require(['@/components/Admin/system/menu/edit.vue'], resolve)
+let systemConfig = (resolve) => require(['@/components/Admin/system/config/add.vue'], resolve)
+let ruleList = (resolve) => require(['@/components/Admin/system/rule/list.vue'], resolve)
+let ruleAdd = (resolve) => require(['@/components/Admin/system/rule/add.vue'], resolve)
+let ruleEdit = (resolve) => require(['@/components/Admin/system/rule/edit.vue'], resolve)
+let positionList = (resolve) => require(['@/components/Admin/structures/position/list.vue'], resolve)
+let positionAdd = (resolve) => require(['@/components/Admin/structures/position/add.vue'], resolve)
+let positionEdit = (resolve) => require(['@/components/Admin/structures/position/edit.vue'], resolve)
+let structuresList = (resolve) => require(['@/components/Admin/structures/structures/list.vue'], resolve)
+let structuresAdd = (resolve) => require(['@/components/Admin/structures/structures/add.vue'], resolve)
+let structuresEdit = (resolve) => require(['@/components/Admin/structures/structures/edit.vue'], resolve)
+let groupsList = (resolve) => require(['@/components/Admin/structures/groups/list.vue'], resolve)
+let groupsAdd = (resolve) => require(['@/components/Admin/structures/groups/add.vue'], resolve)
+let groupsEdit = (resolve) => require(['@/components/Admin/structures/groups/edit.vue'], resolve)
+let usersList = (resolve) => require(['@/components/Admin/personnel/users/list.vue'], resolve)
+let usersAdd = (resolve) => require(['@/components/Admin/personnel/users/add.vue'], resolve)
+let usersEdit = (resolve) => require(['@/components/Admin/personnel/users/edit.vue'], resolve)
+let mailList = (resolve) => require(['@/components/Busi/mail/mail/list.vue'], resolve)
+let mailAdd = (resolve) => require(['@/components/Busi/mail/mail/add.vue'], resolve)
+let mailEdit = (resolve) => require(['@/components/Busi/mail/mail/edit.vue'], resolve)
 
 Vue.use(VueRouter)
 

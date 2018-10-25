@@ -19,8 +19,8 @@ const createLintingRule = () => ({
   }
 })
 
-const DEV_HOST = JSON.stringify('http://www.vuethinktest.com');
-const PUB_HOST = JSON.stringify('http://www.vuethinktest.com');
+const DEV_HOST = JSON.stringify('http://api.xiaolu289.com');
+const PUB_HOST = JSON.stringify('http://api.xiaolu289.com');
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
@@ -39,6 +39,14 @@ module.exports = {
       HOST: process.env.NODE_ENV === 'production' ? PUB_HOST : DEV_HOST
     })
   ],
+  externals: {
+    "vue": "Vue",
+    "vue-router": "VueRouter",
+    "vuex": "Vuex",
+    "axios": "axios",
+    "js-cookie": "Cookies",
+    "lodash" : "_"
+  },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
