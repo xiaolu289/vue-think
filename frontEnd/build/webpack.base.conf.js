@@ -4,6 +4,7 @@ const utils = require('./utils')
 const config = require('../config')
 var webpack = require('webpack')
 const vueLoaderConfig = require('./vue-loader.conf')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -37,7 +38,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       HOST: process.env.NODE_ENV === 'production' ? PUB_HOST : DEV_HOST
-    })
+    }),
+    new BundleAnalyzerPlugin()
   ],
   externals: {
     "vue": "Vue",
@@ -45,7 +47,10 @@ module.exports = {
     "vuex": "Vuex",
     "axios": "axios",
     "js-cookie": "Cookies",
-    "lodash" : "_"
+    "lodash" : "_",
+    "babel-polyfill" : "window",
+    "moment" : "moment",
+    "vee-validate" : "VeeValidate"
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
