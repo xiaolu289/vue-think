@@ -27,6 +27,11 @@
   import Cookies from 'js-cookie'
   import _g from '@/assets/js/global'
   import config from '@/assets/js/config.js'
+  import { Button, Dialog, Form, FormItem, Input } from 'element-ui'
+  Vue.use(Button)
+  Vue.use(Form)
+  Vue.use(FormItem)
+  Vue.use(Input)
   
   export default {
     data() {

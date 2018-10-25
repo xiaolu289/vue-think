@@ -67,6 +67,10 @@
   import btnGroup from '../../../Common/btn-group.vue'
   import http from '../../../../assets/js/http'
   import _g from '@/assets/js/global'
+  import { Button, Table, TableColumn } from 'element-ui'
+  Vue.use(Button)
+  Vue.use(Table)
+  Vue.use(TableColumn)
 
   export default {
     data() {

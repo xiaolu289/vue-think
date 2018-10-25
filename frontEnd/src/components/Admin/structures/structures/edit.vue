@@ -21,6 +21,13 @@
   import fomrMixin from '../../../../assets/js/form_com'
   import _ from 'lodash'
   import _g from '@/assets/js/global'
+  import { Button, Form, FormItem, Input, Select, Option } from 'element-ui'
+  Vue.use(Button)
+  Vue.use(Form)
+  Vue.use(FormItem)
+  Vue.use(Input)
+  Vue.use(Select)
+  Vue.use(Option)
 
   export default {
     data() {

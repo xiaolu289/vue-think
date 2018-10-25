@@ -47,6 +47,14 @@
   import fomrMixin from '../../../../assets/js/form_com'
   import _ from 'lodash'
   import _g from '@/assets/js/global'
+  import { Button, Dialog, Form, FormItem, Input, Select, Option, Checkbox } from 'element-ui'
+  Vue.use(Button)
+  Vue.use(Form)
+  Vue.use(FormItem)
+  Vue.use(Input)
+  Vue.use(Select)
+  Vue.use(Option)
+  Vue.use(Checkbox)
 
   export default {
     data() {

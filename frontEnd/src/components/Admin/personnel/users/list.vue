@@ -83,6 +83,12 @@
   import btnGroup from '../../../Common/btn-group.vue'
   import http from '../../../../assets/js/http'
   import _g from '@/assets/js/global'
+  import { Button, Input, Table, TableColumn, Pagination } from 'element-ui'
+  Vue.use(Button)
+  Vue.use(Input)
+  Vue.use(Table)
+  Vue.use(TableColumn)
+  Vue.use(Pagination)
 
   export default {
     data() {

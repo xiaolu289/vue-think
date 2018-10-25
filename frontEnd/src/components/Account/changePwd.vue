@@ -22,6 +22,12 @@
   import http from '../../assets/js/http'
   import Lockr from 'lockr'
   import _g from '@/assets/js/global'
+  import { Button, Dialog, Form, FormItem, Input } from 'element-ui'
+  Vue.use(Button)
+  Vue.use(Dialog)
+  Vue.use(Form)
+  Vue.use(FormItem)
+  Vue.use(Input)
 
   export default {
     data() {
