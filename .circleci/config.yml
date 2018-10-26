@@ -16,8 +16,7 @@ jobs:
           - v1-vue-think-{{ .Branch }}-{{ checksum "frontEnd/package.json" }}
           - v1-vue-think-{{ .Branch }}-
 
-      - run: cd frontEnd
-      - run: npm install
+      - run: cd frontEnd && npm install
 
       - save_cache:
           key: v1-vue-think-{{ .Branch }}-{{ checksum "frontEnd/package.json" }}
@@ -31,10 +30,8 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/project/frontEnd
-      - run: pwd
-      - run: ls
-      - run: npm run build
+          at: ~/project
+      - run: cd frontEnd && npm run build
 
 workflows:
   version: 2
