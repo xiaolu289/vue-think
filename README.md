@@ -1,7 +1,8 @@
-[![CircleCI](https://circleci.com/gh/xiaolu289/vue-think.svg?style=svg)](https://circleci.com/gh/xiaolu289/vue-think)
-
 vue-think
 ===============
+
+[![CircleCI](https://circleci.com/gh/xiaolu289/vue-think.svg?style=svg)](https://circleci.com/gh/xiaolu289/vue-think)
+
 ## 注意事项
 
 该项目fork自：https://github.com/honraytech/VueThink
