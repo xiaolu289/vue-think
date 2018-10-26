@@ -16,7 +16,8 @@ jobs:
           - v1-vue-think-{{ .Branch }}-{{ checksum "frontEnd/package.json" }}
           - v1-vue-think-{{ .Branch }}-
 
-      - run: cd fronEnd/
+      - run: pwd
+      - run: cd fronEnd
       - run: npm install
 
       - save_cache:
