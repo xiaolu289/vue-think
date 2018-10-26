@@ -13,14 +13,14 @@ jobs:
 
       - restore_cache:
           keys:
-          - v1-vue-think-{{ .Branch }}-{{ checksum "package.json" }}
+          - v1-vue-think-{{ .Branch }}-{{ checksum "frontEnd/package.json" }}
           - v1-vue-think-{{ .Branch }}-
 
       - run: cd fronEnd/
       - run: npm install
 
       - save_cache:
-          key: v1-vue-think-{{ .Branch }}-{{ checksum "package.json" }}
+          key: v1-vue-think-{{ .Branch }}-{{ checksum "frontEnd/package.json" }}
           paths:
             - node_modules
       - persist_to_workspace:
