@@ -32,8 +32,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/project
-      - run: pwd
       - run: cd frontEnd
+      - run: pwd
+      - run: ls
       - run: npm run build
 
 workflows:
