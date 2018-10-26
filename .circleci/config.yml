@@ -31,8 +31,7 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/project
-      - run: cd frontEnd
+          at: ~/project/frontEnd
       - run: pwd
       - run: ls
       - run: npm run build
