@@ -10,6 +10,8 @@
   import http from '../../assets/js/http'
   import _ from 'lodash'
   import _g from '@/assets/js/global'
+  import { Button } from 'element-ui'
+  Vue.use(Button)
   
   export default {
     props: ['selectedData', 'type'],

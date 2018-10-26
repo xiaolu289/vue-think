@@ -9,6 +9,8 @@
 }
 </style>
 <script>
+  import { Dialog } from 'element-ui'
+  Vue.use(Dialog)
   export default {
     props: ['url'],
     data() {

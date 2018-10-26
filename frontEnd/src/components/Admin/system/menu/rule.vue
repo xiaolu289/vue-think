@@ -45,6 +45,12 @@
 <script>
   import http from '../../../../assets/js/http'
   import _ from 'lodash'
+  import { Button, Table, TableColumn, Dialog, Input } from 'element-ui'
+  Vue.use(Button)
+  Vue.use(Table)
+  Vue.use(TableColumn)
+  Vue.use(Dialog)
+  Vue.use(Input)
   export default {
     data() {
       return {

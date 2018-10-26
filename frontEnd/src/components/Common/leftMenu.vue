@@ -22,6 +22,11 @@
 
 <script>
 import _g from '@/assets/js/global'
+import { Menu, Submenu, MenuItemGroup, MenuItem } from 'element-ui'
+Vue.use(Menu)
+Vue.use(Submenu)
+Vue.use(MenuItemGroup)
+Vue.use(MenuItem)
 
 export default {
   props: ['menuData', 'menu'],

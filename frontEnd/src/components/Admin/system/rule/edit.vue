@@ -31,6 +31,15 @@
   import http from '../../../../assets/js/http'
   import fomrMixin from '../../../../assets/js/form_com'
   import _g from '@/assets/js/global'
+  import { Button, Form, FormItem, Input, Select, Option, Radio, RadioGroup } from 'element-ui'
+  Vue.use(Button)
+  Vue.use(Form)
+  Vue.use(FormItem)
+  Vue.use(Input)
+  Vue.use(Select)
+  Vue.use(Option)
+  Vue.use(Radio)
+  Vue.use(RadioGroup)
 
   export default {
     data() {

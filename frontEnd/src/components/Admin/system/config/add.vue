@@ -47,6 +47,15 @@
   import preview from './preview.vue'
   import _g from '@/assets/js/global'
   import config from '@/assets/js/config.js'
+  import fomrMixin from '../../../../assets/js/form_com'
+  import { Button, Form, FormItem, Input, Upload, Radio, RadioGroup } from 'element-ui'
+  Vue.use(Button)
+  Vue.use(Form)
+  Vue.use(FormItem)
+  Vue.use(Input)
+  Vue.use(Upload)
+  Vue.use(Radio)
+  Vue.use(RadioGroup)
 
   export default {
     data() {
