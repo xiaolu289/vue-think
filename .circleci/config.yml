@@ -54,8 +54,11 @@ jobs:
           at: ~/project
       - run: ls ~/project/vue-think/frontEnd/dist
       - run: 
+          name: Clean
+          command: ssh $SSH_USER@$SSH_HOST "cd $DEPLOY_PATH && rm -rf ./*"
+      - run: 
           name: Deploy
-          command: scp -o StrictHostKeyChecking=no ~/project/vue-think/frontEnd/dist $SSH_USER@$SSH_HOST:$DEPLOY_PATH
+          command: scp -o StrictHostKeyChecking=no -r ~/project/vue-think/frontEnd/dist $SSH_USER@$SSH_HOST:$DEPLOY_PATH
 workflows:
   version: 2
   install-and-parallel-test:
