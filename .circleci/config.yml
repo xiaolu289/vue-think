@@ -64,7 +64,7 @@ jobs:
       - run: ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "cd $DEPLOY_BACKEND_PATH/php/ && mkdir runtime"
       - run: 
           name: Deploy backEnd
-          command: tar -czf ~/project/vue-think/php.tar.gz ~/project/vue-think/php/* && scp -o StrictHostKeyChecking=no -r ~/project/vue-think/php.tar.gz $SSH_USER@$SSH_HOST:$DEPLOY_BACKEND_PATH/php/
+          command: cd ~/project/vue-think && tar -czf php.tar.gz php/* && scp -o StrictHostKeyChecking=no -r ~/project/vue-think/php.tar.gz $SSH_USER@$SSH_HOST:$DEPLOY_BACKEND_PATH/php/
       - run: ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "cd $DEPLOY_BACKEND_PATH/php/ && tar -xzf php.tar.gz"
       - run: ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "/bin/cp -f $LOCAL_BACKEND_CONFIG_PATH/database.php $DEPLOY_BACKEND_PATH/php/config/database.php"
       - run: ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "/bin/cp -f $LOCAL_BACKEND_CONFIG_PATH/extra/cus_config.php $DEPLOY_BACKEND_PATH/php/config/extra/cus_config.php"
