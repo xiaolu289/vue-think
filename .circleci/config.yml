@@ -61,7 +61,6 @@ jobs:
       - run: 
           name: Clean backEnd
           command: ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "cd $DEPLOY_BACKEND_PATH && rm -rf ./php/*"
-      - run: ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "cd $DEPLOY_BACKEND_PATH/php/ && mkdir runtime"
       - run: 
           name: Deploy backEnd
           command: cd ~/project/vue-think && tar -czf php.tar.gz php/* && scp -o StrictHostKeyChecking=no -r ~/project/vue-think/php.tar.gz $SSH_USER@$SSH_HOST:$DEPLOY_BACKEND_PATH/php/
