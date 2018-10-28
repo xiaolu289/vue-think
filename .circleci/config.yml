@@ -57,7 +57,8 @@ jobs:
           command: ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "cd $DEPLOY_FRONTEND_PATH && rm -rf ./*"
       - run: 
           name: Deploy frontEnd
-          command: scp -o StrictHostKeyChecking=no -r ~/project/vue-think/frontEnd/dist $SSH_USER@$SSH_HOST:$DEPLOY_FRONTEND_PATH
+          command: cd ~/project/vue-think/frontEnd/dist && tar -czf dist.tar.gz ./* && scp -o StrictHostKeyChecking=no -r ~/project/vue-think/frontEnd/dist/dist.tar.gz $SSH_USER@$SSH_HOST:$DEPLOY_FRONTEND_PATH
+      - run: ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "cd $DEPLOY_FRONTEND_PATH && tar -xzf dist.tar.gz"
       - run: 
           name: Clean backEnd
           command: ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "cd $DEPLOY_BACKEND_PATH && rm -rf ./php/*"
