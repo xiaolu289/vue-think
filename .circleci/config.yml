@@ -21,7 +21,7 @@ jobs:
       - save_cache:
           key: v1-vue-think-{{ .Branch }}-{{ checksum "frontEnd/package.json" }}
           paths:
-            - node_modules
+            - frontEnd/node_modules
       - persist_to_workspace:
           root: ~/project
           paths:
@@ -29,6 +29,10 @@ jobs:
   build:
     <<: *defaults
     steps:
+      - save_cache:
+        key: v1-vue-think-{{ .Branch }}-build
+          paths:
+            - frontEnd/dist
       - attach_workspace:
           at: ~/project
       - run: cd frontEnd && npm run build
