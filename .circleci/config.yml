@@ -38,7 +38,7 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run: 
-          name: Deploy by scp
+          name: Deploy
           command: scp -o StrictHostKeyChecking=no ~/project/vue-think/frontEnd/dist $SSH_USER@$SSH_HOST:$DEPLOY_PATH
 workflows:
   version: 2
