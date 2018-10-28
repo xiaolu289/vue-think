@@ -30,9 +30,9 @@ jobs:
     <<: *defaults
     steps:
       - save_cache:
-        key: v1-vue-think-{{ .Branch }}-build
-        paths:
-          - frontEnd/dist
+          key: v1-vue-think-{{ .Branch }}-build
+          paths:
+            - frontEnd/dist
       - attach_workspace:
           at: ~/project
       - run: cd frontEnd && npm run build
