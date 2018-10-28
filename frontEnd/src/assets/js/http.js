@@ -5,14 +5,7 @@ import Lockr from 'lockr'
 import Cookies from 'js-cookie'
 import _ from 'lodash'
 import _g from '@/assets/js/global'
-import bus from '@/assets/js/bus.js'
-import config from '@/assets/js/config.js'
 import baseHttp from '@/assets/js/base_http.js'
-
-axios.defaults.baseURL = config.HOST
-axios.defaults.timeout = 1000 * 15
-axios.defaults.headers.authKey = Lockr.get('authKey')
-axios.defaults.headers['Content-Type'] = 'application/json'
 
 const apiMethods = {
   methods: {

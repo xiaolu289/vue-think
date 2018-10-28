@@ -1,7 +1,8 @@
 import store from '@/vuex/store'
 import router from '@/router/index.js'
-import Lockr from 'lockr'
 import bus from '@/assets/js/bus.js'
+import { Message } from 'element-ui'
+Vue.prototype.$message = Message
 
 const commonFn = {
   j2s(obj) {

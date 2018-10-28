@@ -1,5 +1,12 @@
 import axios from 'axios'
 import bus from '@/assets/js/bus.js'
+import config from '@/assets/js/config.js'
+import Lockr from 'lockr'
+
+axios.defaults.baseURL = config.HOST
+axios.defaults.timeout = 1000 * 15
+axios.defaults.headers.authKey = Lockr.get('authKey')
+axios.defaults.headers['Content-Type'] = 'application/json'
 export default {
   apiGet(url, data) {
     return new Promise((resolve, reject) => {

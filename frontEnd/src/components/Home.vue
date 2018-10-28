@@ -136,12 +136,13 @@
   import _ from 'lodash'
   import _g from '@/assets/js/global'
   import config from '@/assets/js/config.js'
-  import { Row, Col, Dropdown, DropdownMenu, DropdownItem } from 'element-ui'
+  import { Row, Col, Dropdown, DropdownMenu, DropdownItem, MessageBox } from 'element-ui'
   Vue.use(Row)
   Vue.use(Col)
   Vue.use(Dropdown)
   Vue.use(DropdownMenu)
   Vue.use(DropdownItem)
+  Vue.prototype.$confirm = MessageBox.confirm
   
   export default {
     data() {

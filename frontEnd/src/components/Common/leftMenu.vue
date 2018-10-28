@@ -56,7 +56,6 @@ export default {
       const pathsArr = this.$route.path.split('/')
       const pathModule = ['', pathsArr[1], pathsArr[2]].join('/')
       const url = this.findMenuByUrl(this.$store.state.menus, pathModule)
-      console.log(url)
       return url
     },
     handleOpen(index, indexPath) {
