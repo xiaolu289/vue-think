@@ -39,7 +39,7 @@ jobs:
           at: ~/project
       - run: 
           name: Deploy
-          command: scp -o  StrictHostKeyChecking=no -i ~/project/vue-think/frontEnd/dist $SSH_USER@$SSH_HOST:$DEPLOY_PATH
+          command: scp -o StrictHostKeyChecking=no ~/project/vue-think/frontEnd/dist $SSH_USER@$SSH_HOST:$DEPLOY_PATH
 workflows:
   version: 2
   install-and-parallel-test:
