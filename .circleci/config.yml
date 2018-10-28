@@ -32,7 +32,14 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run: cd frontEnd && npm run build
-
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run: 
+          name: Deploy
+          command: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc --exclude .git ~/project/vue-think/frontEnd $SSH_USER@$SSH_HOST:$DEPLOY_PATH
 workflows:
   version: 2
   install-and-parallel-test:
@@ -41,5 +48,11 @@ workflows:
       - build:
           requires:
             - install
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
 
 
