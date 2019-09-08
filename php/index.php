@@ -16,6 +16,6 @@ define('APP_PATH', __DIR__.'/application/');
 // 定义配置文件目录和应用目录同级
 define('CONF_PATH', __DIR__.'/config/');
 // 定义runtime目录
-define('RUNTIME_PATH', dirname(__DIR__).'/runtime/');
+define('RUNTIME_PATH', __DIR__.'/runtime/');
 // 加载框架引导文件
 require './thinkphp/start.php';
