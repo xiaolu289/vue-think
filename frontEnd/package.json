@@ -12,7 +12,8 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "analyz": "set NODE_ENV=production && set npm_config_report=true && node build/analyz.js"
+    "analyz": "set NODE_ENV=production && set npm_config_report=true && node build/analyz.js",
+    "stats": "webpack --config build/webpack.prod.conf.js --profile --json > compilation-stats.json"
   },
   "dependencies": {
     "axios": "^0.17.1",
